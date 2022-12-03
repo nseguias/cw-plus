@@ -40,7 +40,7 @@ Attributes emitted:
 | "to"     | recipient |
 | "amount" | amount    |
 
-`Burn{amount}` - Remove `amount` tokens from the balance of `info.sender` and reduce `total_supply` by the same amount.
+`Burn{amount}` - Removes `amount` tokens from the balance of `info.sender` and reduce `total_supply` by the same amount.
 
 Attributes emitted:
 
@@ -91,7 +91,7 @@ spent some in the middle), it will just round down to 0 and not make any underfl
 
 ### Messages
 
-`IncreaseAllowance{spender, amount, expires}` - Set or increase the allowance such that `spender` may access up to
+`IncreaseAllowance{spender, amount, expires}` - Sets or increases the allowance such that `spender` may access up to
 `amount + current_allowance` tokens from the `info.sender` account. This may optionally come with an `Expiration` time,
 which if set limits when the approval can be used (by time or height).
 
@@ -104,7 +104,7 @@ Attributes emitted:
 | "spender" | spender              |
 | "amount"  | amount               |
 
-`DecreaseAllowance{spender, amount, expires}` - Decrease or clear the allowance such that `spender` may access up to
+`DecreaseAllowance{spender, amount, expires}` - Decreases or clears the allowance such that `spender` may access up to
 `current_allowance - amount` tokens from the `info.sender` account. This may optionally come with an `Expiration` time,
 which if set limits when the approval can be used (by time or height). If `amount >= current_allowance`, this will clear
 the allowance (delete it).
